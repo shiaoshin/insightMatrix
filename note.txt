@@ -1,0 +1,22 @@
+http://owenschoppe.com/?cat=5
+
+  a b c d
+a 3 2 1 1
+b 0 3 1 2
+c 1 0 3 1
+d 0 0 0 3
+
+d(ab) = 4
+d(da) = 1
+d(db) = 4
+d(dc) = 1
+d(ac) = 2
+d(bc) = 1
+
+Process on each pass:
+1.Calculate distance(squared euclidean) between each pair of cells
+2.Sorted by the distance of each pair
+3.Cluster the nearst pair together (if happens to be tie) only one pairing each pass
+4.Calculate the centroid of every new cluster
+5.Go back to 1. and repeat
+6.Stop while A) Reach a preferrable amount of group, or B) Distances between cluster are larger than a threshold. C) Everything is grouped into one giant cluster.

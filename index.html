@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insight Matrix</title>
+	
+	<!-- Mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Meta Info-->
+	<meta name="author" content="">
+    <meta name="description" content="">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="">
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+	
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel="stylesheet">
+	
+</head>
+<body>
+	<div class="container-fluid">
+        <!-- Header -->
+        <header class="row">
+            <div class="col-sm-12">
+                <h1>Insight Matrix </h1>
+                <div class="pull-right" style="margin-top:-45px;">
+                    <button class="btn btn-default">Start New</button>  
+                    <button class="btn btn-default">Import Data</button>
+                </div>
+            </div>            
+        </header>
+        
+        <!-- Brief -->
+        <div id="brief" class="row">
+            <div class="col-sm-12">
+                <hr><br>
+                Insight Matrix (IM) is a pattern finding tool for researchers to identify relationships among data set. IM utilizes the theory behind Cluster Analysis as it's programatic approach to group things together and thus benefits the user to better organize the data. <br>To use IM, you first need to have a dataset in hand either pre-existing or created from scratch. You can either start a new analysis or import your data csv to IM using the 2 buttons on the top right corner.
+            </div>
+        </div>
+        
+        <!-- Drop -->
+        <div class="row">
+            <div class="col-sm-12">
+                <a onclick="briefDrop()" class="pull-left" href="#"><span class="caret"></span></a>
+            </div>            
+        </div>
+        
+        <!-- Start From Scratch -->
+        <div id="initiate" class="row">
+            <form>
+                <div class="col-sm-3 form-group">
+                    <label>1. Type of Matrix</label>
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="matrixType" id="symmetricalMatrix" value="symmetrical"> Symmetrical
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="matrixType" id="asymmetricalMatrix" value="asymmetrical"> Asymmetrical
+                    </label>
+                </div>
+                <div class="col-sm-5 form-group">
+                    <label>2. Data Labels</label>
+                    <textarea class="form-control" placeholder="Separate each item with a comma"></textarea>
+                </div>
+                <div class="col-sm-4 form-group">
+                    <label>3. Scoring Values</label>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Minimum</label>
+                            <input type="number" class="form-control" placeholder="0">
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Maximum</label>
+                            <input type="number" class="form-control" placeholder="0">
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Content -->
+        <div id="content" class="row">
+            <div id="top" class="col-sm-offset-4">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div id="left" class="col-sm-2 col-sm-offset-2" >
+                
+            </div>
+            <div id="cell" class="col-sm-6">
+                
+            </div>
+        </div>
+    </div>
+
+	<!-- jQuery -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<!-- Bootstrap js -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Custom JavaScript -->
+	<script src="js/script.js"></script>
+</body>
+</html>
